@@ -1,0 +1,35 @@
+<div class="main">
+    <mat-card class="card-header">
+        <h2>
+            <span class="remove-text">Remove</span>
+            <span classs="background-text">Background</span>
+        </h2>
+    </mat-card>
+    <div class="card-container">
+        <mat-card class="rounded-card">
+            <mat-card-content class="card-content">
+                <div>
+                    <h2>Upload an Image to remove the background</h2>
+                </div>
+                <div class="ulpoad-button">
+                    <mat-card class="upload-card">
+                        <mat-card-content class="ulpoad-card-content">
+                            <input class="form-control" type="file" (change)="onChange($event)">
+                            <button mat-flat-button color="primary" (click)="onUpload()"
+                                class="btn btn-success rounded-button">
+                                Upload Image
+                            </button>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+
+                <!-- Shareable short link of  uploaded file -->
+                <div class="container text-center jumbotron" *ngIf="shortLink">
+                    <h2> Visit Here</h2>
+                    <a href="{{shortLink}}">{{shortLink}}</a>
+                </div>
+                <img class="card-img-top" [src]="Image" alt="Card image cap">
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

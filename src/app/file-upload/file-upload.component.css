@@ -1,0 +1,67 @@
+.main {
+    background-color: rgb(238, 241, 247);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    text-align: center;  
+    background-color: white;
+  }
+
+.card-header .remove-text {
+    color: rgb(84, 97, 107);;
+  }
+  
+
+ 
+.card-header h2 {
+    margin: 0;
+    line-height: 1; /* Ensure the line height is 1 for vertical centering */
+  }
+ 
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+
+}
+
+.rounded-card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card-content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 24px;
+
+}
+
+.upload-card {
+    background-color: rgb(220, 227, 235);
+    overflow: hidden;
+}
+
+.ulpoad-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img-top {
+    margin-top: 12px;
+}
+
+.rounded-button {
+    border-radius: 18px;
+}
+ 
