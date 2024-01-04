@@ -15,7 +15,7 @@ COPY . .
 RUN npm run build 
 FROM nginx:alpine
 ## Copy our default nginx config
-COPY nginx.conf /etc/nginx/conf.d/configfile.template
+COPY nginx/default.conf /etc/nginx/conf.d/configfile.template
 
 ENV PORT 8080
 ENV HOST 0.0.0.0
