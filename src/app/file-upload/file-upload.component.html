@@ -1,8 +1,8 @@
-<div class="main">
+<div>
     <mat-card class="card-header">
         <h2>
             <span class="remove-text">Remove</span>
-            <span classs="background-text">Background</span>
+            <span class="background-text">Background</span>
         </h2>
     </mat-card>
     <div class="card-container">
@@ -15,21 +15,39 @@
                     <mat-card class="upload-card">
                         <mat-card-content class="ulpoad-card-content">
                             <input class="form-control" type="file" (change)="onChange($event)">
-                            <button mat-flat-button color="primary" (click)="onUpload()"
+                            <button mat-flat-button  (click)="onUpload()"
                                 class="btn btn-success rounded-button">
                                 Upload Image
                             </button>
                         </mat-card-content>
                     </mat-card>
                 </div>
-
-                <!-- Shareable short link of  uploaded file -->
-                <div class="container text-center jumbotron" *ngIf="shortLink">
-                    <h2> Visit Here</h2>
-                    <a href="{{shortLink}}">{{shortLink}}</a>
-                </div>
-                <img class="card-img-top" [src]="Image" alt="Card image cap">
             </mat-card-content>
+
         </mat-card>
+        <div *ngIf="showAnimation">
+            <ng-lottie [options]="options"></ng-lottie>    
+        </div>
+       
+        <!-- <ngx-ui-loader></ngx-ui-loader> -->
+        <div *ngIf="showResponse" class="image-text-container">
+            <div class="original-img">
+                <h3>Original Image</h3>
+                <img src="{{ Original_Image }}" alt="Original Image" style="width: 400px;">
+            </div>
+            <div class="image-set">
+                <h3>Background Removed Image</h3>
+                 
+                <img  [src]="Image" alt="Bg Removed Image" style="width: 400px;">
+            </div>
+        </div>
+
+
+
+
+       
+        <button *ngIf="showResponse"  mat-flat-button  (click)="downloadImage()">Download Image</button>
+
+      
+
     </div>
-</div>
